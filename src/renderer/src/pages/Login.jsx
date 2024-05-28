@@ -37,17 +37,17 @@ function Login() {
 
     return <form onSubmit={handleSubmit((values)=> submit(values))}>
         <div className="campo">
-            <label htmlFor="email">E-mail</label>
+            <label htmlFor="email" class="block text-gray-700 text-sm font-bold mb-2" >E-mail</label>
             <input {...register('email')} name="email" type="email" id="email" placeholder="seu email"/>
             {errors.email && <span>{errors.email.message}</span>}
         </div>
         <div className="campo">
-            <label htmlFor="password">Senha</label>
+            <label htmlFor="password" class="block text-gray-700 text-sm font-bold mb-2" >Senha</label>
             <input {...register('password')} name="password" type="password" id="password" placeholder="sua senha"/>
             {errors.password && <span>{errors.password.message}</span>}
         </div>
 
-        <button type='submit' >Entrar</button>
+        <button type='submit' class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >Entrar</button>
     </form>;
 }
 
