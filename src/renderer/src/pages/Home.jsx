@@ -15,7 +15,7 @@ function Home() {
 
 
     }, [])
-    
+
     useEffect(()=>{
         getUsers()
     },[getUsers])
